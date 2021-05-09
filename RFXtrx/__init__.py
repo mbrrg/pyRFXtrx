@@ -739,6 +739,7 @@ class PyNetworkTransport(RFXtrxTransport):
     """ Implementation of a transport using sockets """
 
     def __init__(self, hostport):
+        _LOGGER.debug("Debug version.")
         self.hostport = hostport    # must be a (host, port) tuple
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self._run_event = threading.Event()
